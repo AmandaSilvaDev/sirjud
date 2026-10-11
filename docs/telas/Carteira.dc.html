@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>SIRJUD COOP — Carteira</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@500;600;700&amp;family=Lato:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F0F2F5}
+a{color:#198754}a:hover{color:#0B3F7E}
+</style>
+</helmet>
+<div style="min-height: 100vh; display: flex; flex-wrap: wrap; background: #F0F2F5; font-family: 'Lato', system-ui, sans-serif; color: #13213A;">
+  <nav aria-label="Menu principal" style="flex: 1 1 240px; max-width: 100%; background: #002D62; padding: 28px 20px; box-sizing: border-box; display: flex; flex-direction: column; gap: 28px;">
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <img src="/_blob/a4efcabfac35dfed590cd97169eeb5f6" alt="Símbolo SIRJUD COOP" style="height: 44px; width: auto; display: block;">
+      <div style="display: flex; flex-direction: column;"><span style="font-family: 'Montagu Slab', Georgia, serif; font-size: 17px; font-weight: 700; letter-spacing: 0.3px; color: #FFFFFF; white-space: nowrap;">SIRJUD COOP</span><span style="font-size: 11px; color: #9DB8D9;">Recuperação de crédito</span></div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 4px;">
+      <span style="font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #8EA9C8; padding: 0 12px 6px;">Gestão</span>
+      <a href="Main.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">Painel</a>
+      <a href="Carteira.dc.html" style="padding: 11px 12px; border-radius: 8px; background: #0B3F7E; color: #FFFFFF; text-decoration: none; font-size: 14px; font-weight: 700;">Carteira</a>
+      <a href="Encaminhamento.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">Encaminhamentos</a>
+      <a href="Cobranca.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">Cobrança extrajudicial</a>
+      <a href="Acordos.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">Acordos</a>
+      <a href="BNDU.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">BNDU</a>
+      <a href="Passivo.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">Polo passivo</a>
+      <span style="font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #8EA9C8; padding: 18px 12px 6px;">Controle</span>
+      <a href="Escritorios.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">Escritórios</a>
+      <a href="Auditoria.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">Auditoria</a>
+      <a href="API.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">API e BI</a>
+    </div>
+  </nav>
+
+  <main style="flex: 999 1 560px; min-width: 0; padding: 32px 40px 48px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px;">
+    <header style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px;">
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <span style="font-size: 13px; color: #55606E;">1.284 contratos · R$ 38,6 mi</span>
+        <h1 style="margin: 0; font-family: 'Montagu Slab', Georgia, serif; font-size: 34px; font-weight: 500; color: #002D62;">Carteira</h1>
+      </div>
+      <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+        <button style="height: 44px; padding: 0 16px; border-radius: 10px; border: 1px solid #CBD3DD; background: #FFFFFF; color: #13213A; font: 700 14px 'Lato', sans-serif;">Exportar Excel</button>
+        <a href="Encaminhamento.dc.html" style="height: 44px; padding: 0 18px; border-radius: 10px; background: #157347; color: #FFFFFF; font: 700 14px 'Lato', sans-serif; display: flex; align-items: center; text-decoration: none;">+ Novo encaminhamento</a>
+      </div>
+    </header>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center; background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 14px; padding: 14px;">
+      <label for="busca" style="position: absolute; left: -9999px;">Buscar</label>
+      <input id="busca" placeholder="Buscar por contrato, CPF/CNPJ, cooperado ou nº do processo" style="flex: 1 1 320px; height: 44px; border: 1px solid #CBD3DD; border-radius: 10px; padding: 0 14px; font: 400 14px 'Lato', sans-serif; color: #13213A;">
+      <button style="height: 40px; padding: 0 14px; border-radius: 999px; border: 1px solid #CBD3DD; background: #FFFFFF; font: 700 13px 'Lato', sans-serif; color: #13213A;">Fase: todas</button>
+      <button style="height: 40px; padding: 0 14px; border-radius: 999px; border: 1px solid #CBD3DD; background: #FFFFFF; font: 700 13px 'Lato', sans-serif; color: #13213A;">Escritório: todos</button>
+      <button style="height: 40px; padding: 0 14px; border-radius: 999px; border: 1px solid #CBD3DD; background: #FFFFFF; font: 700 13px 'Lato', sans-serif; color: #13213A;">Agência</button>
+      <button style="height: 40px; padding: 0 14px; border-radius: 999px; border: 1px solid #CBD3DD; background: #FFFFFF; font: 700 13px 'Lato', sans-serif; color: #13213A;">Produto</button>
+      <button style="height: 40px; padding: 0 14px; border-radius: 999px; border: none; background: #002D62; font: 700 13px 'Lato', sans-serif; color: #FFFFFF;">Parados &gt; 60 dias</button>
+    </div>
+
+    <section style="background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 14px; padding: 8px 20px 16px;">
+      <div style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; font-size: 14px; min-width: 900px;">
+          <thead>
+            <tr style="text-align: left; color: #55606E; font-size: 12px; text-transform: uppercase; letter-spacing: 0.6px;">
+              <th style="padding: 14px 8px; border-bottom: 1px solid #E2E6EC;">Contrato</th>
+              <th style="padding: 14px 8px; border-bottom: 1px solid #E2E6EC;">Cooperado</th>
+              <th style="padding: 14px 8px; border-bottom: 1px solid #E2E6EC;">Produto</th>
+              <th style="padding: 14px 8px; border-bottom: 1px solid #E2E6EC; text-align: right;">Saldo</th>
+              <th style="padding: 14px 8px; border-bottom: 1px solid #E2E6EC;">Fase</th>
+              <th style="padding: 14px 8px; border-bottom: 1px solid #E2E6EC;">Escritório</th>
+              <th style="padding: 14px 8px; border-bottom: 1px solid #E2E6EC;">Última atualização</th>
+              <th style="padding: 14px 8px; border-bottom: 1px solid #E2E6EC;"><span style="position: absolute; left: -9999px;">Abrir</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <sc-for list="{{linhas}}" as="l" hint-placeholder-count="8">
+              <tr>
+                <td style="padding: 14px 8px; border-bottom: 1px solid #EFF2F6; font-weight: 700;">{{l.contrato}}</td>
+                <td style="padding: 14px 8px; border-bottom: 1px solid #EFF2F6;">{{l.coop}}</td>
+                <td style="padding: 14px 8px; border-bottom: 1px solid #EFF2F6; color: #55606E;">{{l.produto}}</td>
+                <td style="padding: 14px 8px; border-bottom: 1px solid #EFF2F6; text-align: right;">{{l.saldo}}</td>
+                <td style="padding: 14px 8px; border-bottom: 1px solid #EFF2F6;"><span style="padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 700; background: {{l.fundo}}; color: {{l.cor}};">{{l.fase}}</span></td>
+                <td style="padding: 14px 8px; border-bottom: 1px solid #EFF2F6;">{{l.escritorio}}</td>
+                <td style="padding: 14px 8px; border-bottom: 1px solid #EFF2F6; color: {{l.atuCor}};">{{l.atu}}</td>
+                <td style="padding: 14px 8px; border-bottom: 1px solid #EFF2F6; text-align: right;"><a href="Processo.dc.html" style="font-weight: 700; font-size: 13px;">Abrir</a></td>
+              </tr>
+            </sc-for>
+          </tbody>
+        </table>
+      </div>
+      <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 14px; font-size: 13px; color: #55606E;">
+        <span>Mostrando 1–8 de 1.284</span>
+        <div style="display: flex; gap: 6px;">
+          <button style="height: 36px; min-width: 36px; border-radius: 8px; border: none; background: #002D62; color: #FFFFFF; font: 700 13px 'Lato', sans-serif;">1</button>
+          <button style="height: 36px; min-width: 36px; border-radius: 8px; border: 1px solid #CBD3DD; background: #FFFFFF; color: #13213A; font: 700 13px 'Lato', sans-serif;">2</button>
+          <button style="height: 36px; min-width: 36px; border-radius: 8px; border: 1px solid #CBD3DD; background: #FFFFFF; color: #13213A; font: 700 13px 'Lato', sans-serif;">3</button>
+          <button style="height: 36px; padding: 0 12px; border-radius: 8px; border: 1px solid #CBD3DD; background: #FFFFFF; color: #13213A; font: 700 13px 'Lato', sans-serif;">Próxima</button>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1000}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const verde = { fundo: '#E2F3EA', cor: '#12613D' };
+    const azul = { fundo: '#E3EAF4', cor: '#0B3F7E' };
+    const ambar = { fundo: '#F6ECD3', cor: '#6B4E0E' };
+    const cinza = { fundo: '#EFF2F6', cor: '#55606E' };
+    const ok = '#55606E', velho = '#8A2424';
+    return {
+      linhas: [
+        { contrato: '[CT-2024-0182]', coop: '[Cooperado A]', produto: 'Crédito rural', saldo: 'R$ 184.320', fase: 'Penhora', escritorio: '[Escritório A]', atu: 'há 1 dia', atuCor: ok, ...azul },
+        { contrato: '[CT-2023-0941]', coop: '[Cooperado B]', produto: 'Capital de giro', saldo: 'R$ 96.700', fase: 'Acordo em dia', escritorio: '[Escritório A]', atu: 'há 3 dias', atuCor: ok, ...verde },
+        { contrato: '[CT-2025-0033]', coop: '[Empresa C Ltda]', produto: 'Financiamento', saldo: 'R$ 412.050', fase: 'Aguardando citação', escritorio: '[Escritório B]', atu: 'há 74 dias', atuCor: velho, ...ambar },
+        { contrato: '[CT-2024-1120]', coop: '[Cooperado D]', produto: 'Cartão', saldo: 'R$ 12.480', fase: 'Cobrança', escritorio: '[Escritório C]', atu: 'há 2 dias', atuCor: ok, ...cinza },
+        { contrato: '[CT-2022-0577]', coop: '[Cooperado E]', produto: 'Crédito rural', saldo: 'R$ 238.900', fase: 'Leilão', escritorio: '[Escritório B]', atu: 'há 5 dias', atuCor: ok, ...azul },
+        { contrato: '[CT-2025-0410]', coop: '[Cooperado F]', produto: 'Consignado', saldo: 'R$ 31.200', fase: 'Aguardando ajuizamento', escritorio: '[Escritório D]', atu: 'há 12 dias', atuCor: ok, ...ambar },
+        { contrato: '[CT-2023-0218]', coop: '[Empresa G S.A.]', produto: 'Capital de giro', saldo: 'R$ 1.020.000', fase: 'Penhora', escritorio: '[Escritório A]', atu: 'hoje', atuCor: ok, ...azul },
+        { contrato: '[CT-2021-0099]', coop: '[Cooperado H]', produto: 'Crédito pessoal', saldo: 'R$ 18.950', fase: 'Suspenso sem bens', escritorio: '[Escritório D]', atu: 'há 96 dias', atuCor: velho, ...cinza }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

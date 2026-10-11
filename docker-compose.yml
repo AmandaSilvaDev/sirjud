@@ -1,0 +1,21 @@
+# Só para desenvolvimento local: PostgreSQL 16 igual ao do Railway.
+# Uso: docker compose up -d db
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: sirjud
+      POSTGRES_USER: sirjud
+      POSTGRES_PASSWORD: sirjud  # senha local, sem valor fora da sua máquina
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sirjud -d sirjud"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  pgdata:

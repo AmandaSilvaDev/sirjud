@@ -1,0 +1,29 @@
+# Python / uv
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Segredos — nunca versionar
+.env
+.env.*
+!.env.example
+
+# Gerados
+staticfiles/
+static/css/app.css
+media/
+bin/
+
+# Editor / SO
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+
+# Material de origem (já copiado para docs/)
+sirjud-coop-kit/
+PROMPT_INICIAL.md

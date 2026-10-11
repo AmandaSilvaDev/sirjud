@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>SIRJUD COOP — Painel da cooperativa</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@500;600;700&amp;family=Lato:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F0F2F5}
+a{color:#198754}a:hover{color:#0B3F7E}
+</style>
+</helmet>
+<div style="min-height: 100vh; display: flex; flex-wrap: wrap; background: #F0F2F5; font-family: 'Lato', system-ui, sans-serif; color: #13213A;">
+
+  <nav aria-label="Menu principal" style="flex: 1 1 240px; max-width: 100%; background: #002D62; color: #E6EDF5; padding: 28px 20px; box-sizing: border-box; display: flex; flex-direction: column; gap: 28px;">
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <img src="/_blob/a4efcabfac35dfed590cd97169eeb5f6" alt="Símbolo SIRJUD COOP" style="height: 44px; width: auto; display: block;">
+      <div style="display: flex; flex-direction: column;">
+        <span style="font-family: 'Montagu Slab', Georgia, serif; font-size: 17px; font-weight: 700; letter-spacing: 0.3px; color: #FFFFFF; white-space: nowrap;">SIRJUD COOP</span>
+        <span style="font-size: 11px; color: #9DB8D9; letter-spacing: 0.4px;">Recuperação de crédito</span>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 4px;">
+      <span style="font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #8EA9C8; padding: 0 12px 6px;">Gestão</span>
+      <a href="Main.dc.html" style="display: flex; align-items: center; gap: 10px; padding: 11px 12px; border-radius: 8px; background: #0B3F7E; color: #FFFFFF; text-decoration: none; font-size: 14px; font-weight: 600;">Painel</a>
+      <a href="Carteira.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">Carteira</a>
+      <a href="Encaminhamento.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">Encaminhamentos</a>
+      <a href="Cobranca.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">Cobrança extrajudicial</a>
+      <a href="Acordos.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">Acordos</a>
+      <a href="BNDU.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">BNDU</a>
+      <a href="Passivo.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">Polo passivo</a>
+      <span style="font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #8EA9C8; padding: 18px 12px 6px;">Controle</span>
+      <a href="Escritorios.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">Escritórios</a>
+      <a href="Auditoria.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">Auditoria</a>
+      <a href="API.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">API e BI</a>
+    </div>
+    <div style="margin-top: auto; padding: 14px 12px; border-top: 1px solid #1E4A78; display: flex; flex-direction: column; gap: 2px;">
+      <span style="font-size: 14px; font-weight: 600; color: #FFFFFF;">[Nome do usuário]</span>
+      <span style="font-size: 12px; color: #9DB8D9;">Gestora de recuperação · [Cooperativa]</span>
+    </div>
+  </nav>
+
+  <main style="flex: 999 1 560px; min-width: 0; padding: 32px 40px 48px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px;">
+    <header style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px;">
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <span style="font-size: 13px; color: #55606E;">Terça, 6 de outubro de 2026</span>
+        <h1 style="margin: 0; font-family: 'Montagu Slab', Georgia, serif; font-size: 34px; font-weight: 500; color: #002D62;">Painel da carteira</h1>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center;">
+        <span style="font-size: 12px; font-weight: 600; color: #6B4E0E; background: #F6ECD3; padding: 6px 10px; border-radius: 999px;">Dados de demonstração</span>
+        <button style="height: 44px; padding: 0 16px; border-radius: 10px; border: 1px solid #CBD3DD; background: #FFFFFF; color: #13213A; font: 600 14px 'Lato', sans-serif;">Todas as agências</button>
+        <button style="height: 44px; padding: 0 16px; border-radius: 10px; border: 1px solid #CBD3DD; background: #FFFFFF; color: #13213A; font: 600 14px 'Lato', sans-serif;">Outubro 2026</button>
+        <button style="height: 44px; padding: 0 18px; border-radius: 10px; border: none; background: #157347; color: #FFFFFF; font: 700 14px 'Lato', sans-serif;">+ Novo encaminhamento</button>
+      </div>
+    </header>
+
+    <section aria-label="Indicadores" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px;">
+      <sc-for list="{{kpis}}" as="k" hint-placeholder-count="5">
+        <div style="background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 14px; padding: 20px; display: flex; flex-direction: column; gap: 8px;">
+          <span style="font-size: 13px; color: #55606E; font-weight: 500;">{{k.label}}</span>
+          <span style="font-family: 'Montagu Slab', Georgia, serif; font-size: 30px; font-weight: 600; color: #002D62;">{{k.value}}</span>
+          <span style="font-size: 12px; color: {{k.noteColor}}; font-weight: 600;">{{k.note}}</span>
+        </div>
+      </sc-for>
+    </section>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 16px;">
+      <section style="flex: 3 1 480px; min-width: 0; background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 16px;">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <h2 style="margin: 0; font-size: 17px; font-weight: 700; color: #002D62;">Carteira por fase</h2>
+          <span style="font-size: 13px; color: #55606E;">contratos · valor</span>
+        </div>
+        <sc-for list="{{fases}}" as="f" hint-placeholder-count="7">
+          <div style="display: grid; grid-template-columns: 180px minmax(0, 1fr) 120px; gap: 14px; align-items: center;">
+            <span style="font-size: 14px; color: #13213A;">{{f.nome}}</span>
+            <div style="height: 12px; background: #EFF2F6; border-radius: 999px; overflow: hidden;"><div style="height: 12px; width: {{f.pct}}; background: {{f.cor}}; border-radius: 999px;"></div></div>
+            <span style="font-size: 13px; color: #55606E; text-align: right;">{{f.qtd}} · {{f.valor}}</span>
+          </div>
+        </sc-for>
+      </section>
+
+      <section style="flex: 2 1 320px; min-width: 0; background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 14px;">
+        <h2 style="margin: 0; font-size: 17px; font-weight: 700; color: #002D62;">Precisa de atenção</h2>
+        <sc-for list="{{alertas}}" as="a" hint-placeholder-count="4">
+          <div style="display: flex; gap: 12px; align-items: flex-start; padding: 12px; border-radius: 10px; background: {{a.fundo}};">
+            <span style="width: 8px; height: 8px; margin-top: 6px; border-radius: 999px; background: {{a.cor}}; flex: none;"></span>
+            <div style="display: flex; flex-direction: column; gap: 2px;">
+              <span style="font-size: 14px; font-weight: 600; color: #13213A;">{{a.titulo}}</span>
+              <span style="font-size: 13px; color: #55606E;">{{a.detalhe}}</span>
+            </div>
+          </div>
+        </sc-for>
+      </section>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 16px;">
+      <section style="flex: 3 1 560px; min-width: 0; background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 12px;">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <h2 style="margin: 0; font-size: 17px; font-weight: 700; color: #002D62;">Escritórios parceiros</h2>
+          <a href="#" style="font-size: 13px; font-weight: 600;">Ver ranking completo</a>
+        </div>
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse; font-size: 14px; min-width: 560px;">
+            <thead>
+              <tr style="text-align: left; color: #55606E; font-size: 12px; text-transform: uppercase; letter-spacing: 0.6px;">
+                <th style="padding: 10px 8px; border-bottom: 1px solid #E2E6EC; font-weight: 600;">Escritório</th>
+                <th style="padding: 10px 8px; border-bottom: 1px solid #E2E6EC; font-weight: 600; text-align: right;">Contratos</th>
+                <th style="padding: 10px 8px; border-bottom: 1px solid #E2E6EC; font-weight: 600; text-align: right;">Taxa de recuperação</th>
+                <th style="padding: 10px 8px; border-bottom: 1px solid #E2E6EC; font-weight: 600; text-align: right;">SLA cumprido</th>
+                <th style="padding: 10px 8px; border-bottom: 1px solid #E2E6EC; font-weight: 600; text-align: right;">Divergências</th>
+              </tr>
+            </thead>
+            <tbody>
+              <sc-for list="{{escritorios}}" as="e" hint-placeholder-count="4">
+                <tr>
+                  <td style="padding: 14px 8px; border-bottom: 1px solid #EFF2F6; font-weight: 600;">{{e.nome}}</td>
+                  <td style="padding: 14px 8px; border-bottom: 1px solid #EFF2F6; text-align: right;">{{e.contratos}}</td>
+                  <td style="padding: 14px 8px; border-bottom: 1px solid #EFF2F6; text-align: right;">{{e.taxa}}</td>
+                  <td style="padding: 14px 8px; border-bottom: 1px solid #EFF2F6; text-align: right;"><span style="padding: 4px 10px; border-radius: 999px; font-size: 13px; font-weight: 600; background: {{e.slaFundo}}; color: {{e.slaCor}};">{{e.sla}}</span></td>
+                  <td style="padding: 14px 8px; border-bottom: 1px solid #EFF2F6; text-align: right;">{{e.div}}</td>
+                </tr>
+              </sc-for>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section style="flex: 2 1 320px; min-width: 0; background: #002D62; color: #FFFFFF; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 16px;">
+        <div style="display: flex; flex-direction: column; gap: 4px;">
+          <h2 style="margin: 0; font-size: 17px; font-weight: 700;">Previsão de recebimento</h2>
+          <span style="font-size: 13px; color: #9DB8D9;">acordos + leilões + venda de BNDU, próximos 6 meses</span>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; align-items: end; height: 170px;">
+          <sc-for list="{{previsao}}" as="p" hint-placeholder-count="6">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 6px; justify-content: flex-end; height: 170px;">
+              <span style="font-size: 11px; color: #E2E6EC;">{{p.valor}}</span>
+              <div style="width: 100%; height: {{p.altura}}; background: #34A56F; border-radius: 6px 6px 2px 2px;"></div>
+              <span style="font-size: 12px; color: #9DB8D9;">{{p.mes}}</span>
+            </div>
+          </sc-for>
+        </div>
+        <span style="font-size: 12px; color: #9DB8D9;">Baseada no prognóstico dos advogados, revisado a cada evento.</span>
+      </section>
+    </div>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1040}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const ok = '#198754', warn = '#8A5A0B', bad = '#9B2C2C';
+    return {
+      kpis: [
+        { label: 'Contratos em trâmite', value: '1.284', note: '312 em cobrança · 972 judiciais', noteColor: '#55606E' },
+        { label: 'Valor em recuperação', value: 'R$ 38,6 mi', note: '+4,1% no mês', noteColor: ok },
+        { label: 'Recuperado em outubro', value: 'R$ 1,92 mi', note: '82% do previsto', noteColor: ok },
+        { label: 'Processos parados > 60 dias', value: '47', note: '9 novos esta semana', noteColor: bad },
+        { label: 'BNDU em estoque', value: '12 bens', note: '3 vencem em 90 dias', noteColor: warn }
+      ],
+      fases: [
+        { nome: 'Em cobrança extrajudicial', qtd: '312', valor: 'R$ 6,1 mi', pct: '62%', cor: '#9DB8D9' },
+        { nome: 'Aguardando ajuizamento', qtd: '58', valor: 'R$ 2,4 mi', pct: '14%', cor: '#5FA37E' },
+        { nome: 'Aguardando citação', qtd: '241', valor: 'R$ 8,9 mi', pct: '48%', cor: '#198754' },
+        { nome: 'Penhora / constrição', qtd: '186', valor: 'R$ 9,7 mi', pct: '38%', cor: '#198754' },
+        { nome: 'Leilão', qtd: '34', valor: 'R$ 3,2 mi', pct: '9%', cor: '#198754' },
+        { nome: 'Acordo em andamento', qtd: '203', valor: 'R$ 5,6 mi', pct: '41%', cor: '#0B3F7E' },
+        { nome: 'Suspenso / sem bens', qtd: '250', valor: 'R$ 2,7 mi', pct: '50%', cor: '#8EA9C8' }
+      ],
+      alertas: [
+        { titulo: '6 pendências documentais vencidas', detalhe: 'Kits devolvidos pelos escritórios há mais de 5 dias', cor: bad, fundo: '#FBEFEC' },
+        { titulo: '14 parcelas de acordo em atraso', detalhe: 'Escritórios já notificados para retomar a execução', cor: warn, fundo: '#FBF4E4' },
+        { titulo: '3 pagamentos sinalizados para baixa', detalhe: 'Cobrança extrajudicial aguarda conferência da recuperação', cor: ok, fundo: '#EFF2F6' },
+        { titulo: '2 novos processos no polo passivo', detalhe: 'Classificação de risco pendente', cor: warn, fundo: '#FBF4E4' }
+      ],
+      escritorios: [
+        { nome: '[Escritório A]', contratos: '418', taxa: '21,4%', sla: '96%', slaCor: '#0B3F7E', slaFundo: '#E3ECF6', div: '2' },
+        { nome: '[Escritório B]', contratos: '296', taxa: '17,9%', sla: '91%', slaCor: '#0B3F7E', slaFundo: '#E3ECF6', div: '5' },
+        { nome: '[Escritório C — cobrança]', contratos: '312', taxa: '12,3%', sla: '88%', slaCor: '#6B4E0E', slaFundo: '#F6ECD3', div: '—' },
+        { nome: '[Escritório D]', contratos: '258', taxa: '9,8%', sla: '72%', slaCor: '#8A2424', slaFundo: '#F7E3E0', div: '11' }
+      ],
+      previsao: [
+        { mes: 'Nov', valor: '1,8', altura: '72px' },
+        { mes: 'Dez', valor: '2,3', altura: '92px' },
+        { mes: 'Jan', valor: '1,4', altura: '56px' },
+        { mes: 'Fev', valor: '1,6', altura: '64px' },
+        { mes: 'Mar', valor: '2,9', altura: '116px' },
+        { mes: 'Abr', valor: '2,1', altura: '84px' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

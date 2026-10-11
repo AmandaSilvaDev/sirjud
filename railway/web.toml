@@ -1,0 +1,13 @@
+# Serviço "web" no Railway. Em Settings → Config-as-code, aponte para /railway/web.toml.
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
+watchPatterns = ["**", "!docs/**", "!*.md"]
+
+[deploy]
+# migrate em todo deploy; no staging também roda seed_demo --if-empty.
+preDeployCommand = ["python manage.py predeploy"]
+healthcheckPath = "/healthz"
+healthcheckTimeout = 120
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 5

@@ -1,0 +1,18 @@
+{% load static %}<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}SIRJUD COOP{% endblock %}</title>
+  <link rel="icon" type="image/png" href="{% static 'img/logo.png' %}">
+  <link rel="stylesheet" href="{% static 'css/app.css' %}">
+</head>
+<body class="min-h-screen bg-surface font-sans text-ink antialiased">
+  {% if DJANGO_ENV == "staging" or DJANGO_ENV == "development" %}
+    <div role="status" class="bg-warning-bg px-4 py-1 text-center text-sm font-bold text-warning-ink">
+      Ambiente de testes · somente dados fictícios
+    </div>
+  {% endif %}
+  {% block body %}{% endblock %}
+</body>
+</html>

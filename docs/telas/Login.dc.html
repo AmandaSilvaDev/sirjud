@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>SIRJUD COOP — Login</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@500;600;700&amp;family=Lato:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F0F2F5}
+a{color:#198754}a:hover{color:#0B3F7E}
+</style>
+</helmet>
+<div style="min-height: 100vh; display: flex; flex-wrap: wrap; font-family: 'Lato', system-ui, sans-serif; color: #13213A; background: #FFFFFF;">
+  <section style="flex: 1 1 480px; background: #002D62; color: #FFFFFF; padding: 64px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; gap: 40px;">
+    <div style="display: flex; align-items: center; gap: 14px;">
+      <img src="/_blob/a4efcabfac35dfed590cd97169eeb5f6" alt="Símbolo SIRJUD COOP" style="height: 56px; width: auto; display: block;">
+      <span style="font-family: 'Montagu Slab', Georgia, serif; font-size: 26px; font-weight: 600; letter-spacing: 0.5px;">SIRJUD COOP</span>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 18px; max-width: 520px;">
+      <h1 style="margin: 0; font-family: 'Montagu Slab', Georgia, serif; font-size: 44px; font-weight: 600; line-height: 1.15;">Inteligência jurídica na recuperação de crédito.</h1>
+      <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #C7D5E8;">Encaminhamento, cobrança, ajuizamento, acordos, BNDU e polo passivo num só lugar — sem pedir atualização, sem abrir o PJe.</p>
+    </div>
+    <span style="font-size: 13px; color: #9DB8D9;">Sistema Integrado de Recuperação de Crédito Jurídico Cooperativo</span>
+  </section>
+
+  <section style="flex: 1 1 440px; padding: 64px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; background: #F0F2F5;">
+    <div style="width: 100%; max-width: 420px; background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 16px; padding: 40px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px;">
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <h2 style="margin: 0; font-family: 'Montagu Slab', Georgia, serif; font-size: 26px; font-weight: 600; color: #002D62;">Entrar</h2>
+        <span style="font-size: 14px; color: #55606E;">Cooperativa ou escritório parceiro</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <label for="email" style="font-size: 13px; font-weight: 700;">E-mail</label>
+        <input id="email" value="nome@cooperativa.coop.br" style="height: 46px; border: 1px solid #CBD3DD; border-radius: 10px; padding: 0 14px; font: 400 15px 'Lato', sans-serif; color: #13213A;">
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <label for="senha" style="font-size: 13px; font-weight: 700;">Senha</label>
+        <input id="senha" type="password" value="senha-segura" style="height: 46px; border: 1px solid #CBD3DD; border-radius: 10px; padding: 0 14px; font: 400 15px 'Lato', sans-serif; color: #13213A;">
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px; padding: 16px; border-radius: 12px; background: #E2F3EA;">
+        <label for="mfa" style="font-size: 13px; font-weight: 700; color: #12613D;">Código do autenticador (MFA)</label>
+        <input id="mfa" value="482 913" style="height: 46px; border: 1px solid #A8D5BD; border-radius: 10px; padding: 0 14px; font: 700 20px 'Lato', sans-serif; letter-spacing: 6px; color: #13213A; background: #FFFFFF;">
+        <span style="font-size: 12px; color: #12613D;">Obrigatório para todos os usuários.</span>
+      </div>
+      <a href="Main.dc.html" style="height: 48px; border-radius: 10px; background: #157347; color: #FFFFFF; font: 700 15px 'Lato', sans-serif; display: flex; align-items: center; justify-content: center; text-decoration: none;">Entrar</a>
+      <a href="#" style="height: 48px; border-radius: 10px; border: 1px solid #CBD3DD; color: #13213A; font: 700 14px 'Lato', sans-serif; display: flex; align-items: center; justify-content: center; text-decoration: none; background: #FFFFFF;">Entrar com Microsoft (Entra ID)</a>
+      <div style="display: flex; justify-content: space-between; font-size: 13px;">
+        <a href="#">Esqueci a senha</a>
+        <span style="color: #55606E;">Conexão protegida · LGPD</span>
+      </div>
+    </div>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
