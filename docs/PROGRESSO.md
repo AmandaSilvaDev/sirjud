@@ -95,6 +95,14 @@ uv run pytest
   máquina travou junto com o WSL durante a sessão; os testes rodaram num
   Postgres 16 portátil. O build da imagem é validado pelo Railway no deploy do PR.
 
+### Correção pós-merge (fase-0-corrige-collectstatic)
+
+O primeiro deploy de produção falhou no `collectstatic`: ele copiava
+`static/src/input.css` (fonte do Tailwind), e o whitenoise tentava resolver o
+`@import "tailwindcss"` como arquivo. Agora `static/src/` fica fora da coleta
+(`SirjudStaticFilesConfig` em `apps/core/apps.py`), e o teste
+`test_staticfiles.py` roda o `collectstatic` com o storage de produção.
+
 ### Pendências
 
 - Configurar o Railway conforme `docs/railway.md` (precisa do seu acesso).
