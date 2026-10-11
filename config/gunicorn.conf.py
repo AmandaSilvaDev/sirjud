@@ -13,3 +13,6 @@ max_requests_jitter = 100
 accesslog = "-"
 errorlog = "-"
 forwarded_allow_ips = "*"
+# Sem socket de controle (gunicornc): não usamos, e o padrão ($HOME/.gunicorn)
+# não é gravável pelo usuário sem privilégios da imagem.
+control_socket_disable = True
