@@ -29,7 +29,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "whitenoise.runserver_nostatic",
-    "django.contrib.staticfiles",
+    "apps.core.apps.SirjudStaticFilesConfig",  # substitui django.contrib.staticfiles
     "csp",
     "apps.core",
     "apps.accounts",
