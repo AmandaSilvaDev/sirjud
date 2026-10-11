@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>SIRJUD COOP — Portal do escritório</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@500;600;700&amp;family=Lato:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F0F2F5}
+a{color:#198754}a:hover{color:#0B3F7E}
+</style>
+</helmet>
+<div style="min-height: 100vh; display: flex; flex-wrap: wrap; background: #F0F2F5; font-family: 'Lato', system-ui, sans-serif; color: #13213A;">
+
+  <nav aria-label="Menu do escritório" style="flex: 1 1 240px; max-width: 100%; background: #002D62; color: #E6EDF5; padding: 28px 20px; box-sizing: border-box; display: flex; flex-direction: column; gap: 28px;">
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <img src="/_blob/a4efcabfac35dfed590cd97169eeb5f6" alt="Símbolo SIRJUD COOP" style="height: 44px; width: auto; display: block;">
+      <div style="display: flex; flex-direction: column;">
+        <span style="font-family: 'Montagu Slab', Georgia, serif; font-size: 17px; font-weight: 700; letter-spacing: 0.3px; color: #FFFFFF; white-space: nowrap;">SIRJUD COOP</span>
+        <span style="font-size: 11px; color: #9DB8D9; letter-spacing: 0.4px;">Portal do escritório</span>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 4px;">
+      <a href="#" style="padding: 11px 12px; border-radius: 8px; background: #0B3F7E; color: #FFFFFF; text-decoration: none; font-size: 14px; font-weight: 600;">Fila de trabalho</a>
+      <a href="#" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">Meus processos</a>
+      <a href="#" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">Novos encaminhamentos</a>
+      <a href="#" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">Cobrança e pagamentos</a>
+      <a href="#" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">Relatórios ao cliente</a>
+      <a href="#" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">Equipe</a>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 8px;">
+      <span style="font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #8EA9C8; padding: 0 12px;">Cooperativas atendidas</span>
+      <span style="padding: 8px 12px; font-size: 14px; color: #FFFFFF;">[Cooperativa 1]</span>
+      <span style="padding: 8px 12px; font-size: 14px; color: #D6E2F0;">[Cooperativa 2]</span>
+      <span style="padding: 8px 12px; font-size: 14px; color: #D6E2F0;">[Cooperativa 3]</span>
+    </div>
+    <div style="margin-top: auto; padding: 14px 12px; border-top: 1px solid #1E4A78; display: flex; flex-direction: column; gap: 2px;">
+      <span style="font-size: 14px; font-weight: 600; color: #FFFFFF;">[Dra. Nome]</span>
+      <span style="font-size: 12px; color: #9DB8D9;">Coordenadora · [Escritório A]</span>
+    </div>
+  </nav>
+
+  <main style="flex: 999 1 560px; min-width: 0; padding: 32px 40px 48px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px;">
+    <header style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px;">
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <span style="font-size: 13px; color: #55606E;">3 cooperativas · 418 processos ativos</span>
+        <h1 style="margin: 0; font-family: 'Montagu Slab', Georgia, serif; font-size: 34px; font-weight: 500; color: #002D62;">Fila de trabalho</h1>
+      </div>
+      <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+        <button style="height: 44px; padding: 0 16px; border-radius: 10px; border: 1px solid #CBD3DD; background: #FFFFFF; color: #13213A; font: 600 14px 'Lato', sans-serif;">Importar andamentos (planilha)</button>
+        <button style="height: 44px; padding: 0 18px; border-radius: 10px; border: none; background: #157347; color: #FFFFFF; font: 700 14px 'Lato', sans-serif;">Gerar relatório do mês</button>
+      </div>
+    </header>
+
+    <section aria-label="Resumo" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+      <sc-for list="{{kpis}}" as="k" hint-placeholder-count="4">
+        <div style="background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 14px; padding: 20px; display: flex; flex-direction: column; gap: 8px;">
+          <span style="font-size: 13px; color: #55606E; font-weight: 500;">{{k.label}}</span>
+          <span style="font-family: 'Montagu Slab', Georgia, serif; font-size: 30px; font-weight: 600; color: #002D62;">{{k.value}}</span>
+          <span style="font-size: 12px; font-weight: 600; color: {{k.cor}};">{{k.note}}</span>
+        </div>
+      </sc-for>
+    </section>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start;">
+      <section style="flex: 3 1 560px; min-width: 0; background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 12px;">
+        <h2 style="margin: 0; font-size: 17px; font-weight: 700; color: #002D62;">Pendências por prazo</h2>
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse; font-size: 14px; min-width: 620px;">
+            <thead>
+              <tr style="text-align: left; color: #55606E; font-size: 12px; text-transform: uppercase; letter-spacing: 0.6px;">
+                <th style="padding: 10px 8px; border-bottom: 1px solid #E2E6EC; font-weight: 600;">Prazo</th>
+                <th style="padding: 10px 8px; border-bottom: 1px solid #E2E6EC; font-weight: 600;">Tarefa</th>
+                <th style="padding: 10px 8px; border-bottom: 1px solid #E2E6EC; font-weight: 600;">Cooperativa</th>
+                <th style="padding: 10px 8px; border-bottom: 1px solid #E2E6EC; font-weight: 600;">Responsável</th>
+                <th style="padding: 10px 8px; border-bottom: 1px solid #E2E6EC; font-weight: 600;"><span style="position: absolute; left: -9999px;">Ação</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <sc-for list="{{fila}}" as="t" hint-placeholder-count="6">
+                <tr>
+                  <td style="padding: 14px 8px; border-bottom: 1px solid #EFF2F6;"><span style="padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 700; background: {{t.fundo}}; color: {{t.cor}};">{{t.prazo}}</span></td>
+                  <td style="padding: 14px 8px; border-bottom: 1px solid #EFF2F6;"><div style="display: flex; flex-direction: column; gap: 2px;"><span style="font-weight: 600;">{{t.tarefa}}</span><span style="font-size: 12px; color: #55606E;">{{t.ref}}</span></div></td>
+                  <td style="padding: 14px 8px; border-bottom: 1px solid #EFF2F6;">{{t.coop}}</td>
+                  <td style="padding: 14px 8px; border-bottom: 1px solid #EFF2F6;">{{t.resp}}</td>
+                  <td style="padding: 14px 8px; border-bottom: 1px solid #EFF2F6; text-align: right;"><button style="height: 36px; padding: 0 12px; border-radius: 8px; border: 1px solid #CBD3DD; background: #FFFFFF; color: #0B3F7E; font: 700 13px 'Lato', sans-serif;">{{t.acao}}</button></td>
+                </tr>
+              </sc-for>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section aria-label="Sinalizar pagamento" style="flex: 1 1 300px; min-width: 0; background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 14px;">
+        <div style="display: flex; flex-direction: column; gap: 4px;">
+          <h2 style="margin: 0; font-size: 17px; font-weight: 700; color: #002D62;">Sinalizar pagamento</h2>
+          <span style="font-size: 13px; color: #55606E;">A recuperação confere no core e confirma a baixa.</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <label for="pg-contrato" style="font-size: 13px; font-weight: 600;">Contrato</label>
+          <input id="pg-contrato" value="[Nº do contrato] · [Cooperado]" style="height: 44px; border: 1px solid #CBD3DD; border-radius: 10px; padding: 0 12px; font: 400 14px 'Lato', sans-serif; color: #13213A;">
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px;">
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <label for="pg-valor" style="font-size: 13px; font-weight: 600;">Valor pago</label>
+            <input id="pg-valor" value="R$ 4.850,00" style="height: 44px; border: 1px solid #CBD3DD; border-radius: 10px; padding: 0 12px; font: 400 14px 'Lato', sans-serif; color: #13213A; min-width: 0;">
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <label for="pg-data" style="font-size: 13px; font-weight: 600;">Data</label>
+            <input id="pg-data" value="05/10/2026" style="height: 44px; border: 1px solid #CBD3DD; border-radius: 10px; padding: 0 12px; font: 400 14px 'Lato', sans-serif; color: #13213A; min-width: 0;">
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <label for="pg-tipo" style="font-size: 13px; font-weight: 600;">Tipo</label>
+          <select id="pg-tipo" style="height: 44px; border: 1px solid #CBD3DD; border-radius: 10px; padding: 0 10px; font: 400 14px 'Lato', sans-serif; color: #13213A; background: #FFFFFF;">
+            <option>Quitação total</option>
+            <option>Parcela de acordo</option>
+            <option>Pagamento parcial</option>
+          </select>
+        </div>
+        <div style="border: 1.5px dashed #9DB8D9; border-radius: 10px; padding: 18px; text-align: center; font-size: 13px; color: #55606E; background: #F0F2F5;">Arraste o comprovante aqui ou <a href="#">escolha um arquivo</a></div>
+        <button style="height: 44px; border-radius: 10px; border: none; background: #157347; color: #FFFFFF; font: 700 14px 'Lato', sans-serif;">Enviar para conferência</button>
+      </section>
+    </div>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":980}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const hoje = { fundo: '#F7E3E0', cor: '#8A2424' };
+    const breve = { fundo: '#F6ECD3', cor: '#6B4E0E' };
+    const folga = { fundo: '#E3ECF6', cor: '#0B3F7E' };
+    return {
+      kpis: [
+        { label: 'Pendências que vencem hoje', value: '8', note: '3 pedidos de informação', cor: '#8A2424' },
+        { label: 'SLA cumprido no mês', value: '96%', note: 'meta contratada: 90%', cor: '#198754' },
+        { label: 'Processos sem comentário há 30 dias', value: '5', note: 'comente para zerar', cor: '#6B4E0E' },
+        { label: 'Novos contratos para aceite', value: '12', note: '2 kits incompletos', cor: '#55606E' }
+      ],
+      fila: [
+        { prazo: 'Hoje', tarefa: 'Responder pedido de informação', ref: 'Proc. [nº] · fase penhora', coop: '[Cooperativa 1]', resp: '[Dra. Nome]', acao: 'Responder', ...hoje },
+        { prazo: 'Hoje', tarefa: 'Aceitar ou devolver encaminhamento', ref: 'Lote 2026-41 · 6 contratos', coop: '[Cooperativa 2]', resp: 'Coordenação', acao: 'Conferir kit', ...hoje },
+        { prazo: 'Amanhã', tarefa: 'Retomar execução: acordo quebrado', ref: 'Contrato [nº] · 2 parcelas em atraso', coop: '[Cooperativa 1]', resp: '[Dr. Nome]', acao: 'Abrir', ...breve },
+        { prazo: '2 dias', tarefa: 'Classificar risco: novo processo passivo', ref: 'Revisional de juros · R$ 62 mil', coop: '[Cooperativa 3]', resp: '[Dra. Nome]', acao: 'Classificar', ...breve },
+        { prazo: '5 dias', tarefa: 'Revisar prognóstico', ref: 'Proc. [nº] · após sentença', coop: '[Cooperativa 1]', resp: '[Dr. Nome]', acao: 'Revisar', ...folga },
+        { prazo: '7 dias', tarefa: 'Ajuizar contrato aceito', ref: 'Contrato [nº] · prazo de ajuizamento', coop: '[Cooperativa 2]', resp: '[Estagiário]', acao: 'Registrar CNJ', ...folga }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

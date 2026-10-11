@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>SIRJUD COOP — Identidade visual</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@500;600;700&amp;family=Lato:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="width: 1200px; height: 760px; box-sizing: border-box; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); background: #FFFFFF; font-family: 'Lato', system-ui, sans-serif; color: #13213A;">
+  <div style="display: flex; flex-direction: column;">
+    <div style="flex: 1; padding: 56px; display: flex; flex-direction: column; justify-content: center; gap: 20px; background: #FFFFFF;">
+      <div style="display: flex; align-items: center; gap: 20px;">
+        <img src="/_blob/c6eadd5fb2dbdc13d511a51f9a048541" alt="Símbolo SIRJUD COOP" style="height: 110px; width: auto; display: block;">
+        <span style="font-family: 'Montagu Slab', Georgia, serif; font-size: 46px; font-weight: 700; color: #002D62; letter-spacing: 0.5px;">SIRJUD COOP</span>
+      </div>
+      <span style="font-size: 18px; color: #55606E; line-height: 1.5;">Sistema Integrado de Recuperação de<br>Crédito Jurídico Cooperativo<br><em style="color: #198754; font-style: italic;">Inteligência jurídica na recuperação de crédito.</em></span>
+    </div>
+    <div style="flex: 1; padding: 56px; display: flex; flex-direction: column; justify-content: center; gap: 16px; background: #002D62;">
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <img src="/_blob/a4efcabfac35dfed590cd97169eeb5f6" alt="Símbolo SIRJUD COOP" style="height: 64px; width: auto; display: block;">
+        <span style="font-family: 'Montagu Slab', Georgia, serif; font-size: 38px; font-weight: 600; color: #FFFFFF;">SIRJUD COOP</span>
+      </div>
+      <span style="font-size: 15px; color: #9DB8D9;">A Ponte Cooperativa: dois Cs entrelaçados (cooperativa e escritório), a balança do direito e a seta verde da recuperação.</span>
+    </div>
+  </div>
+
+  <div style="padding: 56px; display: flex; flex-direction: column; gap: 32px; border-left: 1px solid #E2E6EC;">
+    <div style="display: flex; flex-direction: column; gap: 14px;">
+      <span style="font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: #55606E;">Paleta</span>
+      <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px;">
+        <sc-for list="{{cores}}" as="c" hint-placeholder-count="8">
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <div style="height: 64px; border-radius: 10px; background: {{c.hex}}; border: 1px solid #E2E6EC;"></div>
+            <span style="font-size: 13px; font-weight: 700;">{{c.nome}}</span>
+            <span style="font-size: 12px; color: #55606E;">{{c.hex}} · {{c.uso}}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <span style="font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: #55606E;">Tipografia</span>
+      <span style="font-family: 'Montagu Slab', Georgia, serif; font-size: 34px; font-weight: 700; color: #002D62;">Montagu Slab — títulos e números</span>
+      <span style="font-size: 18px; font-weight: 400;">Lato — interface, tabelas e textos</span>
+      <span style="font-size: 14px; color: #55606E; line-height: 1.55;">70% azul institucional, 25% verde, 5% cinza prata e branco. Verde nas ações principais e no crescimento; vermelho só para alertas críticos.</span>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1200,"height":760}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      cores: [
+        { nome: 'Azul institucional', hex: '#002D62', uso: '70% · base' },
+        { nome: 'Verde', hex: '#198754', uso: '25% · crescimento' },
+        { nome: 'Verde ação', hex: '#157347', uso: 'botões (AA)' },
+        { nome: 'Verde claro', hex: '#34A56F', uso: 'sobre fundo azul' },
+        { nome: 'Cinza prata', hex: '#F0F2F5', uso: 'fundo' },
+        { nome: 'Branco', hex: '#FFFFFF', uso: 'cartões' },
+        { nome: 'Âmbar', hex: '#8A5A0B', uso: 'atenção' },
+        { nome: 'Vermelho', hex: '#9B2C2C', uso: 'crítico' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

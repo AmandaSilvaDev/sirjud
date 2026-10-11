@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>SIRJUD COOP — Polo passivo</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@500;600;700&amp;family=Lato:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F0F2F5}
+a{color:#198754}a:hover{color:#0B3F7E}
+</style>
+</helmet>
+<div style="min-height: 100vh; display: flex; flex-wrap: wrap; background: #F0F2F5; font-family: 'Lato', system-ui, sans-serif; color: #13213A;">
+  <nav aria-label="Menu principal" style="flex: 1 1 240px; max-width: 100%; background: #002D62; padding: 28px 20px; box-sizing: border-box; display: flex; flex-direction: column; gap: 28px;">
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <img src="/_blob/a4efcabfac35dfed590cd97169eeb5f6" alt="Símbolo SIRJUD COOP" style="height: 44px; width: auto; display: block;">
+      <div style="display: flex; flex-direction: column;"><span style="font-family: 'Montagu Slab', Georgia, serif; font-size: 17px; font-weight: 700; letter-spacing: 0.3px; color: #FFFFFF; white-space: nowrap;">SIRJUD COOP</span><span style="font-size: 11px; color: #9DB8D9;">Recuperação de crédito</span></div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 4px;">
+      <span style="font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #8EA9C8; padding: 0 12px 6px;">Gestão</span>
+      <a href="Main.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">Painel</a>
+      <a href="Carteira.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">Carteira</a>
+      <a href="Encaminhamento.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">Encaminhamentos</a>
+      <a href="Cobranca.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">Cobrança extrajudicial</a>
+      <a href="Acordos.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">Acordos</a>
+      <a href="BNDU.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">BNDU</a>
+      <a href="Passivo.dc.html" style="padding: 11px 12px; border-radius: 8px; background: #0B3F7E; color: #FFFFFF; text-decoration: none; font-size: 14px; font-weight: 700;">Polo passivo</a>
+      <span style="font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #8EA9C8; padding: 18px 12px 6px;">Controle</span>
+      <a href="Escritorios.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">Escritórios</a>
+      <a href="Auditoria.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">Auditoria</a>
+      <a href="API.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">API e BI</a>
+    </div>
+  </nav>
+
+  <main style="flex: 999 1 560px; min-width: 0; padding: 32px 40px 48px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px;">
+    <header style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px;">
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <span style="font-size: 13px; color: #55606E;">Processos em que a cooperativa é ré</span>
+        <h1 style="margin: 0; font-family: 'Montagu Slab', Georgia, serif; font-size: 34px; font-weight: 500; color: #002D62;">Polo passivo</h1>
+      </div>
+      <button style="height: 44px; padding: 0 18px; border-radius: 10px; border: none; background: #157347; color: #FFFFFF; font: 700 14px 'Lato', sans-serif;">+ Cadastrar processo recebido</button>
+    </header>
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; padding: 16px 20px; border-radius: 14px; background: #F6ECD3; border: 1px solid #EBDDB8;">
+      <div style="display: flex; flex-direction: column; gap: 2px;">
+        <span style="font-size: 15px; font-weight: 700; color: #6B4E0E;">2 novos processos chegaram pelo Domicílio Judicial Eletrônico</span>
+        <span style="font-size: 13px; color: #6B4E0E;">Distribua a um escritório — o prazo de defesa já está correndo.</span>
+      </div>
+      <button style="height: 40px; padding: 0 14px; border-radius: 10px; border: none; background: #002D62; color: #FFFFFF; font: 700 13px 'Lato', sans-serif;">Distribuir agora</button>
+    </div>
+
+    <section aria-label="Contingência" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+      <div style="background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 14px; padding: 20px; display: flex; flex-direction: column; gap: 8px;"><span style="font-size: 13px; color: #55606E;">Processos ativos</span><span style="font-family: 'Montagu Slab', Georgia, serif; font-size: 30px; font-weight: 600; color: #002D62;">86</span><span style="font-size: 12px; color: #55606E; font-weight: 700;">revisionais, consumidor, trabalhistas</span></div>
+      <div style="background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 14px; padding: 20px; display: flex; flex-direction: column; gap: 8px;"><span style="font-size: 13px; color: #55606E;">Risco provável</span><span style="font-family: 'Montagu Slab', Georgia, serif; font-size: 30px; font-weight: 600; color: #8A2424;">R$ 1,2 mi</span><span style="font-size: 12px; color: #55606E; font-weight: 700;">14 processos · base da provisão</span></div>
+      <div style="background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 14px; padding: 20px; display: flex; flex-direction: column; gap: 8px;"><span style="font-size: 13px; color: #55606E;">Risco possível</span><span style="font-family: 'Montagu Slab', Georgia, serif; font-size: 30px; font-weight: 600; color: #6B4E0E;">R$ 3,4 mi</span><span style="font-size: 12px; color: #55606E; font-weight: 700;">31 processos</span></div>
+      <div style="background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 14px; padding: 20px; display: flex; flex-direction: column; gap: 8px;"><span style="font-size: 13px; color: #55606E;">Risco remoto</span><span style="font-family: 'Montagu Slab', Georgia, serif; font-size: 30px; font-weight: 600; color: #12613D;">R$ 2,1 mi</span><span style="font-size: 12px; color: #55606E; font-weight: 700;">39 processos</span></div>
+    </section>
+
+    <section style="background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 14px; padding: 8px 20px 16px;">
+      <div style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; font-size: 14px; min-width: 960px;">
+          <thead>
+            <tr style="text-align: left; color: #55606E; font-size: 12px; text-transform: uppercase; letter-spacing: 0.6px;">
+              <th style="padding: 14px 8px; border-bottom: 1px solid #E2E6EC;">Processo · autor</th>
+              <th style="padding: 14px 8px; border-bottom: 1px solid #E2E6EC;">Assunto</th>
+              <th style="padding: 14px 8px; border-bottom: 1px solid #E2E6EC; text-align: right;">Valor da causa</th>
+              <th style="padding: 14px 8px; border-bottom: 1px solid #E2E6EC;">Risco</th>
+              <th style="padding: 14px 8px; border-bottom: 1px solid #E2E6EC; text-align: right;">Perda estimada</th>
+              <th style="padding: 14px 8px; border-bottom: 1px solid #E2E6EC;">Próximo prazo</th>
+              <th style="padding: 14px 8px; border-bottom: 1px solid #E2E6EC;">Escritório</th>
+            </tr>
+          </thead>
+          <tbody>
+            <sc-for list="{{processos}}" as="p" hint-placeholder-count="6">
+              <tr>
+                <td style="padding: 14px 8px; border-bottom: 1px solid #EFF2F6;"><div style="display: flex; flex-direction: column; gap: 2px;"><span style="font-weight: 700;">{{p.num}}</span><span style="font-size: 12px; color: #55606E;">{{p.autor}}</span></div></td>
+                <td style="padding: 14px 8px; border-bottom: 1px solid #EFF2F6;">{{p.assunto}}</td>
+                <td style="padding: 14px 8px; border-bottom: 1px solid #EFF2F6; text-align: right;">{{p.causa}}</td>
+                <td style="padding: 14px 8px; border-bottom: 1px solid #EFF2F6;"><span style="padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 700; background: {{p.fundo}}; color: {{p.cor}};">{{p.risco}}</span></td>
+                <td style="padding: 14px 8px; border-bottom: 1px solid #EFF2F6; text-align: right; font-weight: 700;">{{p.perda}}</td>
+                <td style="padding: 14px 8px; border-bottom: 1px solid #EFF2F6;">{{p.prazo}}</td>
+                <td style="padding: 14px 8px; border-bottom: 1px solid #EFF2F6;">{{p.esc}}</td>
+              </tr>
+            </sc-for>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1000}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const prov = { risco: 'Provável', fundo: '#F7E3E0', cor: '#8A2424' };
+    const poss = { risco: 'Possível', fundo: '#F6ECD3', cor: '#6B4E0E' };
+    const rem = { risco: 'Remoto', fundo: '#E2F3EA', cor: '#12613D' };
+    const nc = { risco: 'Classificar', fundo: '#E3EAF4', cor: '#0B3F7E' };
+    return {
+      processos: [
+        { num: '[0001111-22.2026.8.22.0001]', autor: '[Autor P]', assunto: 'Revisional de juros', causa: 'R$ 62.000', perda: '—', prazo: 'Contestação · 12/10', esc: 'A distribuir', ...nc },
+        { num: '[0002222-33.2026.5.14.0002]', autor: '[Ex-colaborador Q]', assunto: 'Trabalhista', causa: 'R$ 140.000', perda: '—', prazo: 'Audiência · 28/10', esc: 'A distribuir', ...nc },
+        { num: '[0003333-44.2025.8.22.0003]', autor: '[Autor R]', assunto: 'Danos morais · negativação', causa: 'R$ 30.000', perda: 'R$ 12.000', prazo: 'Recurso · 20/10', esc: '[Escritório B]', ...prov },
+        { num: '[0004444-55.2025.8.22.0001]', autor: '[Empresa S]', assunto: 'Revisional de contrato', causa: 'R$ 890.000', perda: 'R$ 210.000', prazo: 'Perícia · nov/2026', esc: '[Escritório A]', ...poss },
+        { num: '[0005555-66.2024.8.22.0005]', autor: '[Autor T]', assunto: 'Consumidor · tarifa', causa: 'R$ 8.400', perda: 'R$ 1.000', prazo: 'Sentença aguardada', esc: '[Escritório B]', ...rem },
+        { num: '[0006666-77.2024.8.22.0002]', autor: '[Autor U]', assunto: 'Restituição de cotas', causa: 'R$ 45.000', perda: 'R$ 45.000', prazo: 'Cumprimento · 30/10', esc: '[Escritório A]', ...prov }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>SIRJUD COOP — API e BI</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@500;600;700&amp;family=Lato:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F0F2F5}
+a{color:#198754}a:hover{color:#0B3F7E}
+</style>
+</helmet>
+<div style="min-height: 100vh; display: flex; flex-wrap: wrap; background: #F0F2F5; font-family: 'Lato', system-ui, sans-serif; color: #13213A;">
+  <nav aria-label="Menu principal" style="flex: 1 1 240px; max-width: 100%; background: #002D62; padding: 28px 20px; box-sizing: border-box; display: flex; flex-direction: column; gap: 28px;">
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <img src="/_blob/a4efcabfac35dfed590cd97169eeb5f6" alt="Símbolo SIRJUD COOP" style="height: 44px; width: auto; display: block;">
+      <div style="display: flex; flex-direction: column;"><span style="font-family: 'Montagu Slab', Georgia, serif; font-size: 17px; font-weight: 700; letter-spacing: 0.3px; color: #FFFFFF; white-space: nowrap;">SIRJUD COOP</span><span style="font-size: 11px; color: #9DB8D9;">Recuperação de crédito</span></div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 4px;">
+      <span style="font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #8EA9C8; padding: 0 12px 6px;">Gestão</span>
+      <a href="Main.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">Painel</a>
+      <a href="Carteira.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">Carteira</a>
+      <a href="Encaminhamento.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">Encaminhamentos</a>
+      <a href="Cobranca.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">Cobrança extrajudicial</a>
+      <a href="Acordos.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">Acordos</a>
+      <a href="BNDU.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">BNDU</a>
+      <a href="Passivo.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">Polo passivo</a>
+      <span style="font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #8EA9C8; padding: 18px 12px 6px;">Controle</span>
+      <a href="Escritorios.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">Escritórios</a>
+      <a href="Auditoria.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">Auditoria</a>
+      <a href="API.dc.html" style="padding: 11px 12px; border-radius: 8px; background: #0B3F7E; color: #FFFFFF; text-decoration: none; font-size: 14px; font-weight: 700;">API e BI</a>
+    </div>
+  </nav>
+
+  <main style="flex: 999 1 560px; min-width: 0; padding: 32px 40px 48px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px;">
+    <header style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px;">
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <span style="font-size: 13px; color: #55606E;">Somente leitura · dados pessoais mascarados por padrão</span>
+        <h1 style="margin: 0; font-family: 'Montagu Slab', Georgia, serif; font-size: 34px; font-weight: 500; color: #002D62;">API e BI</h1>
+      </div>
+      <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+        <button style="height: 44px; padding: 0 16px; border-radius: 10px; border: 1px solid #CBD3DD; background: #FFFFFF; color: #13213A; font: 700 14px 'Lato', sans-serif;">Baixar modelo Power BI (.pbix)</button>
+        <button style="height: 44px; padding: 0 18px; border-radius: 10px; border: none; background: #157347; color: #FFFFFF; font: 700 14px 'Lato', sans-serif;">+ Gerar token</button>
+      </div>
+    </header>
+
+    <section style="background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 12px;">
+      <h2 style="margin: 0; font-size: 17px; font-weight: 700; color: #002D62;">Tokens de acesso</h2>
+      <div style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; font-size: 14px; min-width: 760px;">
+          <thead>
+            <tr style="text-align: left; color: #55606E; font-size: 12px; text-transform: uppercase; letter-spacing: 0.6px;">
+              <th style="padding: 12px 8px; border-bottom: 1px solid #E2E6EC;">Nome</th>
+              <th style="padding: 12px 8px; border-bottom: 1px solid #E2E6EC;">Escopo</th>
+              <th style="padding: 12px 8px; border-bottom: 1px solid #E2E6EC;">Último uso</th>
+              <th style="padding: 12px 8px; border-bottom: 1px solid #E2E6EC;">Expira</th>
+              <th style="padding: 12px 8px; border-bottom: 1px solid #E2E6EC;"><span style="position: absolute; left: -9999px;">Ações</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="padding: 14px 8px; border-bottom: 1px solid #EFF2F6; font-weight: 700;">Power BI · produção</td><td style="padding: 14px 8px; border-bottom: 1px solid #EFF2F6;">Leitura · sem CPF</td><td style="padding: 14px 8px; border-bottom: 1px solid #EFF2F6;">hoje, 05:00</td><td style="padding: 14px 8px; border-bottom: 1px solid #EFF2F6;">06/04/2027</td><td style="padding: 14px 8px; border-bottom: 1px solid #EFF2F6; text-align: right;"><button style="height: 36px; padding: 0 12px; border-radius: 8px; border: 1px solid #CBD3DD; background: #FFFFFF; color: #8A2424; font: 700 13px 'Lato', sans-serif;">Revogar</button></td></tr>
+            <tr><td style="padding: 14px 8px; border-bottom: 1px solid #EFF2F6; font-weight: 700;">Controladoria · provisão</td><td style="padding: 14px 8px; border-bottom: 1px solid #EFF2F6;">Leitura · passivo e prognósticos</td><td style="padding: 14px 8px; border-bottom: 1px solid #EFF2F6;">ontem, 18:40</td><td style="padding: 14px 8px; border-bottom: 1px solid #EFF2F6;">01/01/2027</td><td style="padding: 14px 8px; border-bottom: 1px solid #EFF2F6; text-align: right;"><button style="height: 36px; padding: 0 12px; border-radius: 8px; border: 1px solid #CBD3DD; background: #FFFFFF; color: #8A2424; font: 700 13px 'Lato', sans-serif;">Revogar</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start;">
+      <section style="flex: 1 1 380px; min-width: 0; background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 10px;">
+        <h2 style="margin: 0; font-size: 17px; font-weight: 700; color: #002D62;">Endpoints</h2>
+        <sc-for list="{{endpoints}}" as="e" hint-placeholder-count="8">
+          <div style="display: flex; gap: 12px; align-items: baseline; padding: 10px 0; border-bottom: 1px solid #EFF2F6;">
+            <span style="font: 700 12px ui-monospace, monospace; color: #12613D; background: #E2F3EA; padding: 3px 8px; border-radius: 6px;">GET</span>
+            <div style="display: flex; flex-direction: column; gap: 2px;"><span style="font: 600 14px ui-monospace, monospace; color: #13213A;">{{e.path}}</span><span style="font-size: 13px; color: #55606E;">{{e.desc}}</span></div>
+          </div>
+        </sc-for>
+      </section>
+      <section style="flex: 1 1 380px; min-width: 0; background: #002D62; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 12px;">
+        <h2 style="margin: 0; font-size: 17px; font-weight: 700; color: #FFFFFF;">Exemplo de carga incremental</h2>
+        <pre style="margin: 0; white-space: pre-wrap; font: 400 13px/1.6 ui-monospace, monospace; color: #D6E2F0;">curl https://api.sirjudcoop.com.br/v1/andamentos \
+  -H "Authorization: Bearer $TOKEN" \
+  -G -d "alterados_desde=2026-10-05" \
+     -d "pagina=1"</pre>
+        <span style="font-size: 13px; color: #9DB8D9;">Paginação, carga por data de alteração e limite de 100 requisições por minuto. Cada chamada fica registrada na auditoria.</span>
+        <a href="#" style="color: #34A56F; font-weight: 700; font-size: 14px;">Dicionário de dados</a>
+      </section>
+    </div>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1000}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      endpoints: [
+        { path: '/v1/contratos', desc: 'Carteira com fase, escritório e saldo' },
+        { path: '/v1/processos', desc: 'Processos, polo, fase e prognóstico' },
+        { path: '/v1/andamentos', desc: 'Movimentações do tribunal e comentários' },
+        { path: '/v1/acordos', desc: 'Acordos, alçada e situação' },
+        { path: '/v1/parcelas', desc: 'Parcelas, vencimentos e pagamentos' },
+        { path: '/v1/bndu', desc: 'Bens, prazos, custos e vendas' },
+        { path: '/v1/passivo', desc: 'Processos contra a cooperativa e risco' },
+        { path: '/v1/indicadores', desc: 'KPIs consolidados por mês e escritório' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+/* Entrada do Tailwind (CLI standalone). Saída: static/css/app.css (gerado, não versionado). */
+@import "tailwindcss";
+
+@source "../../templates";
+@source "../../apps";
+
+/* Fontes hospedadas no próprio app (OFL) — sem Google Fonts, por LGPD e CSP. */
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/lato-latin-400-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/lato-latin-700-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Montagu Slab";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/montagu-slab-latin-500-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Montagu Slab";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/montagu-slab-latin-600-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Montagu Slab";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/montagu-slab-latin-700-normal.woff2") format("woff2");
+}
+
+/* Tokens copiados das telas em docs/telas/. */
+@theme {
+  --font-sans: "Lato", system-ui, sans-serif;
+  --font-display: "Montagu Slab", Georgia, serif;
+
+  --color-brand: #002d62;          /* azul institucional (70%) */
+  --color-brand-700: #0b3f7e;
+  --color-brand-600: #1e4a78;
+  --color-brand-300: #9db8d9;
+  --color-brand-200: #c7d5e8;
+  --color-brand-100: #d6e2f0;
+  --color-brand-50: #e3ecf6;
+
+  --color-success: #198754;        /* verde (25%) */
+  --color-action: #157347;         /* botões principais (AA com branco) */
+  --color-success-light: #34a56f;
+  --color-success-ink: #12613d;
+  --color-success-bg: #e2f3ea;
+  --color-success-line: #a8d5bd;
+
+  --color-warning: #8a5a0b;
+  --color-warning-ink: #6b4e0e;
+  --color-warning-bg: #f6ecd3;
+
+  --color-danger: #9b2c2c;
+  --color-danger-ink: #8a2424;
+  --color-danger-bg: #f7e3e0;
+
+  --color-ink: #13213a;            /* texto */
+  --color-muted: #55606e;          /* texto secundário */
+  --color-line: #e2e6ec;           /* bordas de cartões */
+  --color-line-strong: #cbd3dd;    /* bordas de campos */
+  --color-surface: #f0f2f5;        /* fundo das telas */
+  --color-surface-2: #eff2f6;
+
+  --radius-field: 10px;
+  --radius-card: 14px;
+}
+
+@layer base {
+  html {
+    color: var(--color-ink);
+    background: var(--color-surface);
+    font-family: var(--font-sans);
+  }
+  a {
+    color: var(--color-success);
+  }
+  a:hover {
+    color: var(--color-brand-700);
+  }
+  :focus-visible {
+    outline: 3px solid var(--color-brand-700);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0 20px;
+    border-radius: var(--radius-field);
+    background: var(--color-action);
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .btn-primary:hover {
+    background: var(--color-success-ink);
+    color: #fff;
+  }
+}

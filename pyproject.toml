@@ -1,0 +1,73 @@
+[project]
+name = "sirjud-coop"
+version = "0.1.0"
+description = "SIRJUD COOP — Sistema Integrado de Recuperação de Crédito Jurídico Cooperativo"
+readme = "CLAUDE.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "django>=5.2,<5.3",
+    "django-environ>=0.12",
+    "psycopg[binary]>=3.2",
+    "gunicorn>=23.0",
+    "whitenoise>=6.9",
+    "django-csp>=4.0",
+    "cryptography>=45.0",
+    # Faker roda no staging (seed_demo), por isso fica nas dependências principais.
+    "faker>=37.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4",
+    "pytest-django>=4.11",
+    "pytest-cov>=6.2",
+    "factory-boy>=3.3",
+    "ruff>=0.12",
+    "bandit>=1.8",
+    "pip-audit>=2.9",
+]
+
+[tool.uv]
+package = false
+# Só aceita versões publicadas há pelo menos ~2 semanas (proteção contra pacote
+# recém-comprometido). Atualize a data quando for subir dependências.
+exclude-newer = "2026-09-27T00:00:00Z"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+extend-exclude = ["sirjud-coop-kit", "docs"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "DJ", "S", "C4", "SIM", "RUF"]
+ignore = [
+    "RUF012",  # atributos mutáveis de classe são o padrão do Django (Meta, choices)
+    "RUF001", "RUF002", "RUF003",  # travessão, "×" e "−" são tipografia correta em português
+]
+
+[tool.ruff.lint.per-file-ignores]
+"**/tests/**" = ["S101", "S105", "S106"]
+"tests/**" = ["S101", "S105", "S106"]
+"config/settings/test.py" = ["S105"]
+"config/settings/dev.py" = ["S105"]
+"**/migrations/**" = ["E501", "RUF"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["apps", "config"]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "config.settings.test"
+python_files = ["test_*.py"]
+# Sem --no-migrations: triggers e constraints vêm de migrations e precisam ser testados.
+addopts = "--strict-markers -p no:cacheprovider"
+testpaths = ["apps"]
+# staticfiles/ só existe depois do collectstatic (build da imagem).
+filterwarnings = ["ignore:No directory at:UserWarning"]
+
+[tool.coverage.run]
+source = ["apps", "config"]
+omit = ["*/migrations/*", "*/tests/*"]
+
+[tool.bandit]
+exclude_dirs = ["tests", ".venv", "sirjud-coop-kit"]
+skips = ["B101"]

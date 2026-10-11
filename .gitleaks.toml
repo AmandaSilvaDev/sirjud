@@ -1,0 +1,7 @@
+# Gitleaks: regras padrão + exceção para as chaves falsas dos testes.
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Chaves fictícias usadas só nos testes"
+paths = ['''config/settings/test\.py''']

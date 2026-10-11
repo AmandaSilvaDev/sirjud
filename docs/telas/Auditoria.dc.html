@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>SIRJUD COOP — Auditoria</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@500;600;700&amp;family=Lato:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F0F2F5}
+a{color:#198754}a:hover{color:#0B3F7E}
+</style>
+</helmet>
+<div style="min-height: 100vh; display: flex; flex-wrap: wrap; background: #F0F2F5; font-family: 'Lato', system-ui, sans-serif; color: #13213A;">
+  <nav aria-label="Menu principal" style="flex: 1 1 240px; max-width: 100%; background: #002D62; padding: 28px 20px; box-sizing: border-box; display: flex; flex-direction: column; gap: 28px;">
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <img src="/_blob/a4efcabfac35dfed590cd97169eeb5f6" alt="Símbolo SIRJUD COOP" style="height: 44px; width: auto; display: block;">
+      <div style="display: flex; flex-direction: column;"><span style="font-family: 'Montagu Slab', Georgia, serif; font-size: 17px; font-weight: 700; letter-spacing: 0.3px; color: #FFFFFF; white-space: nowrap;">SIRJUD COOP</span><span style="font-size: 11px; color: #9DB8D9;">Recuperação de crédito</span></div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 4px;">
+      <span style="font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #8EA9C8; padding: 0 12px 6px;">Gestão</span>
+      <a href="Main.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">Painel</a>
+      <a href="Carteira.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">Carteira</a>
+      <a href="Encaminhamento.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">Encaminhamentos</a>
+      <a href="Cobranca.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">Cobrança extrajudicial</a>
+      <a href="Acordos.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">Acordos</a>
+      <a href="BNDU.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">BNDU</a>
+      <a href="Passivo.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">Polo passivo</a>
+      <span style="font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #8EA9C8; padding: 18px 12px 6px;">Controle</span>
+      <a href="Escritorios.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">Escritórios</a>
+      <a href="Auditoria.dc.html" style="padding: 11px 12px; border-radius: 8px; background: #0B3F7E; color: #FFFFFF; text-decoration: none; font-size: 14px; font-weight: 700;">Auditoria</a>
+      <a href="API.dc.html" style="padding: 11px 12px; border-radius: 8px; color: #D6E2F0; text-decoration: none; font-size: 14px;">API e BI</a>
+    </div>
+  </nav>
+
+  <main style="flex: 999 1 560px; min-width: 0; padding: 32px 40px 48px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px;">
+    <header style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px;">
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <span style="font-size: 13px; color: #55606E;">Log imutável · somente leitura · retido por 5 anos</span>
+        <h1 style="margin: 0; font-family: 'Montagu Slab', Georgia, serif; font-size: 34px; font-weight: 500; color: #002D62;">Auditoria</h1>
+      </div>
+      <button style="height: 44px; padding: 0 16px; border-radius: 10px; border: 1px solid #CBD3DD; background: #FFFFFF; color: #13213A; font: 700 14px 'Lato', sans-serif;">Exportar relatório</button>
+    </header>
+
+    <section aria-label="Alertas de segurança" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px;">
+      <div style="padding: 14px 16px; border-radius: 12px; background: #F7E3E0; border: 1px solid #E9C3BD; display: flex; flex-direction: column; gap: 2px;"><span style="font-size: 14px; font-weight: 700; color: #8A2424;">Download em massa</span><span style="font-size: 13px; color: #8A2424;">[Usuário X] baixou 214 documentos em 6 min · conta suspensa</span></div>
+      <div style="padding: 14px 16px; border-radius: 12px; background: #F6ECD3; border: 1px solid #EBDDB8; display: flex; flex-direction: column; gap: 2px;"><span style="font-size: 14px; font-weight: 700; color: #6B4E0E;">Login de outro país</span><span style="font-size: 13px; color: #6B4E0E;">[Usuário Y] · Portugal · MFA confirmado</span></div>
+      <div style="padding: 14px 16px; border-radius: 12px; background: #FFFFFF; border: 1px solid #E2E6EC; display: flex; flex-direction: column; gap: 2px;"><span style="font-size: 14px; font-weight: 700;">Logins falhos (24h)</span><span style="font-size: 13px; color: #55606E;">7 tentativas · 1 conta bloqueada</span></div>
+    </section>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center; background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 14px; padding: 14px;">
+      <button style="height: 40px; padding: 0 14px; border-radius: 999px; border: 1px solid #CBD3DD; background: #FFFFFF; font: 700 13px 'Lato', sans-serif; color: #13213A;">Usuário: todos</button>
+      <button style="height: 40px; padding: 0 14px; border-radius: 999px; border: 1px solid #CBD3DD; background: #FFFFFF; font: 700 13px 'Lato', sans-serif; color: #13213A;">Ação: todas</button>
+      <button style="height: 40px; padding: 0 14px; border-radius: 999px; border: 1px solid #CBD3DD; background: #FFFFFF; font: 700 13px 'Lato', sans-serif; color: #13213A;">Escritório: todos</button>
+      <button style="height: 40px; padding: 0 14px; border-radius: 999px; border: 1px solid #CBD3DD; background: #FFFFFF; font: 700 13px 'Lato', sans-serif; color: #13213A;">Hoje</button>
+      <button style="height: 40px; padding: 0 14px; border-radius: 999px; border: none; background: #002D62; font: 700 13px 'Lato', sans-serif; color: #FFFFFF;">Incluir consultas da IA</button>
+    </div>
+
+    <section style="background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 14px; padding: 8px 20px 16px;">
+      <div style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; font-size: 14px; min-width: 1000px;">
+          <thead>
+            <tr style="text-align: left; color: #55606E; font-size: 12px; text-transform: uppercase; letter-spacing: 0.6px;">
+              <th style="padding: 14px 8px; border-bottom: 1px solid #E2E6EC;">Data e hora</th>
+              <th style="padding: 14px 8px; border-bottom: 1px solid #E2E6EC;">Usuário · perfil</th>
+              <th style="padding: 14px 8px; border-bottom: 1px solid #E2E6EC;">Ação</th>
+              <th style="padding: 14px 8px; border-bottom: 1px solid #E2E6EC;">Objeto</th>
+              <th style="padding: 14px 8px; border-bottom: 1px solid #E2E6EC;">Detalhe</th>
+              <th style="padding: 14px 8px; border-bottom: 1px solid #E2E6EC;">IP · navegador</th>
+            </tr>
+          </thead>
+          <tbody>
+            <sc-for list="{{logs}}" as="l" hint-placeholder-count="8">
+              <tr>
+                <td style="padding: 12px 8px; border-bottom: 1px solid #EFF2F6; white-space: nowrap; font-variant-numeric: tabular-nums;">{{l.data}}</td>
+                <td style="padding: 12px 8px; border-bottom: 1px solid #EFF2F6;"><div style="display: flex; flex-direction: column; gap: 2px;"><span style="font-weight: 700;">{{l.user}}</span><span style="font-size: 12px; color: #55606E;">{{l.perfil}}</span></div></td>
+                <td style="padding: 12px 8px; border-bottom: 1px solid #EFF2F6;"><span style="padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 700; background: {{l.fundo}}; color: {{l.cor}};">{{l.acao}}</span></td>
+                <td style="padding: 12px 8px; border-bottom: 1px solid #EFF2F6;">{{l.obj}}</td>
+                <td style="padding: 12px 8px; border-bottom: 1px solid #EFF2F6; color: #34404F;">{{l.det}}</td>
+                <td style="padding: 12px 8px; border-bottom: 1px solid #EFF2F6; font-size: 12px; color: #55606E;">{{l.ip}}</td>
+              </tr>
+            </sc-for>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1000}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const alt = { fundo: '#E3EAF4', cor: '#0B3F7E' };
+    const lei = { fundo: '#EFF2F6', cor: '#55606E' };
+    const dow = { fundo: '#F6ECD3', cor: '#6B4E0E' };
+    const apr = { fundo: '#E2F3EA', cor: '#12613D' };
+    const exc = { fundo: '#F7E3E0', cor: '#8A2424' };
+    return {
+      logs: [
+        { data: '06/10/2026 14:20', user: '[Amanda]', perfil: 'Gestor da cooperativa', acao: 'Alterou', obj: 'Processo 123456', det: 'fase: Citação → Penhora', ip: '200.xxx.xxx.xxx · Chrome / Windows', ...alt },
+        { data: '06/10/2026 14:12', user: '[Dra. Nome]', perfil: 'Advogada · [Escritório A]', acao: 'Baixou', obj: 'cedula_0182.pdf', det: 'marca d’água aplicada', ip: '177.xxx.xxx.xxx · Edge / Windows', ...dow },
+        { data: '06/10/2026 13:58', user: '[Gestora]', perfil: 'Gestor da cooperativa', acao: 'Aprovou', obj: 'Acordo [CT-2023-0941]', det: 'desconto 18% · alçada gerência', ip: '200.xxx.xxx.xxx · Chrome / macOS', ...apr },
+        { data: '06/10/2026 13:41', user: 'Assistente IA', perfil: 'em nome de [Analista]', acao: 'Consultou', obj: '12 processos', det: 'escopo: carteira do usuário', ip: 'interno', ...lei },
+        { data: '06/10/2026 11:30', user: '[Analista]', perfil: 'Operador · recuperação', acao: 'Confirmou baixa', obj: 'Contrato [CT-2024-1120]', det: 'pagamento sinalizado conferido no core', ip: '200.xxx.xxx.xxx · Chrome / Windows', ...apr },
+        { data: '06/10/2026 10:05', user: '[Admin]', perfil: 'Administrador', acao: 'Excluiu', obj: 'Usuário [Estagiário Z]', det: 'acesso revogado · MFA reconfirmado', ip: '191.xxx.xxx.xxx · Firefox / Linux', ...exc },
+        { data: '06/10/2026 09:47', user: '[Dr. Nome]', perfil: 'Advogado · [Escritório B]', acao: 'Consultou', obj: 'Processo [0003333-44]', det: 'visualização da linha do tempo', ip: '189.xxx.xxx.xxx · Safari / iOS', ...lei },
+        { data: '06/10/2026 08:15', user: '[Gestora]', perfil: 'Gestor da cooperativa', acao: 'Alterou', obj: 'Permissões de [Analista]', det: 'adicionou: aprovar acordos até 10%', ip: '200.xxx.xxx.xxx · Chrome / macOS', ...alt }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

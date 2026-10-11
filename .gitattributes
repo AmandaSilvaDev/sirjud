@@ -1,0 +1,4 @@
+# Repositório sempre com LF (imagem Linux, CI); binários intactos.
+* text=auto eol=lf
+*.png binary
+*.woff2 binary
