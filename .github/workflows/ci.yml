@@ -65,7 +65,7 @@ jobs:
           version: ${{ env.UV_VERSION }}
       - run: uv sync --frozen
       # Falha em achados de severidade média ou alta.
-      - run: uv run bandit -c pyproject.toml -r apps config -ll
+      - run: uv run bandit -c pyproject.toml -r apps config scripts -ll
       - name: pip-audit (dependências de produção travadas no uv.lock)
         run: |
           uv export --frozen --no-dev --format requirements-txt > /tmp/requirements.txt

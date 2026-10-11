@@ -19,7 +19,7 @@ Dois ambientes: `production` (só a `main`) e `staging` (base dos PR Environment
 Gere as chaves na sua máquina (valores diferentes para cada ambiente):
 
 ```bash
-uv run python manage.py generate_keys
+py -3.12 scripts/generate_keys.py
 ```
 
 | Variável | staging | production |

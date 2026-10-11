@@ -67,7 +67,7 @@ CNJ (módulo 97), que será usado na Fase 5.
 
 ```bash
 uv sync                                  # instala dependências (.venv)
-cp .env.example .env                     # preencha com: uv run python manage.py generate_keys
+cp .env.example .env                     # preencha com: py -3.12 scripts/generate_keys.py
 docker compose up -d db                  # Postgres 16 local
 uv run python manage.py migrate
 uv run python manage.py seed_demo
